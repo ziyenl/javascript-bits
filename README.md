@@ -36,7 +36,7 @@ The seven falsey values are:
 - undefined
 - false
 ---
-###JavaScript Objects
+### JavaScript Objects
 
 `let person = {
 	name: "Jane",
@@ -139,6 +139,7 @@ People = {"name": Paul, "age": 24}
 Looping through arrays
 `arr.forEach(function(x){console.log(x);});`
 
+---
 
 ### Block Scope vs Function Scope
 
@@ -147,6 +148,7 @@ Looping through arrays
 
 Stick to block scope
 
+---
 ### Prototypical Inheritance
 
     class Person{
@@ -182,7 +184,7 @@ Inheritance
 `let somebody = Person("Bob, 23);`
 - `somebody instanceof Person;` true
 - `soembody instanceOf Employee;` false
-
+- 
 ### Prototypical Inheritance
     let p = {name: 'Bob', age : 23, sayHello: function(){
         console.log("I am ${this.name}" );
@@ -219,7 +221,7 @@ It points to current execution context.
     p.introduce();
     p.setting();
     console.log(p.name);
-
+---
 ### Built-In Functions Objects
 
 | Function       | Description                                           |  
@@ -247,7 +249,7 @@ It points to current execution context.
  | `arr.filter`  | takes a function and returns 1st that fulfill condition `arr.filter((item)=> item.val > 10)`   |
  | `arr.map`     | takes a function and returns 1st that fulfill condition   `arr.map((item)=> item.val * 2)`      |
  |`arr.reduce` | takes a function and returns a summation `arr.reduce((accum, curr)=> {return accum + curr},0)` |                             
-
+---
 ### Arrow Function [ES6]
 Use the function keyword inside classes, use arrow functions for most other cases
 First instance works fine.
@@ -260,7 +262,7 @@ Second instance returns undefined.
     let obj = {name: 'Bob', sayHello: ()=>
         console.log(`This is ${this.name}`)
     }
-
+---
 ### Default Arguments and Object in Arrows [ES6]
 
 Example of default arguments
@@ -271,7 +273,7 @@ Example of default arguments
     
     console.log(obj2());
 
-
+---
 ### Spread Operator [ES6]
 
 It serves three functions:
@@ -310,8 +312,8 @@ Pass array element as argument
     let add = (x, y, z) =>  x + y + z;
     
     console.log(add(...arr));
-
- ## Object Destructuring
+---
+ ## Object Destructuring [ES6]
 
 Destructuring Object
 
@@ -351,8 +353,8 @@ Arrays Destructuring
     
     console.log(w);
     console.log(x);
-
-## JavaScript Import / Export
+---
+## JavaScript Import / Export [ES6]
 
 Three types of exports:
 - export default
@@ -370,6 +372,8 @@ Three types of exports:
 It is more as such `modeul.exports.default = myFunc`.
 Bear in mind when using mismatch of syntax. So, if you export default in one,
 and use required in the other, required need to be: `let myFunc = required('./someFile').default;`
+
+---
 ## Asychronous Javascript
 Three forms of asynchronous Javascript:
 - Callbacks
