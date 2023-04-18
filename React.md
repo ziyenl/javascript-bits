@@ -1,8 +1,8 @@
 
-### React
+## React
 
-- modular component
-- Components are basic unit of organization of react app
+Javascript framework that emphasizes modular component.
+Components are basic unit of organization of react app.
 ___
 ### React Fragments
 
@@ -143,7 +143,8 @@ Query Parameters: Found in a different part of URL. After a question mark at the
 
 ___
 
-###useParams
+### useParams
+
 Calling End:
 
     <Route path="/counter/:name"  element={<CounterButtonPage/>} />
@@ -157,6 +158,7 @@ Receiving End:
 ___
 
 ### useLocations
+
 Calling End:
 
     <Route path="/counter"  element={<CounterButtonPage/>} />
@@ -315,11 +317,11 @@ Hence, pass in regular and then do the async fetch inside
 
 ---
 ### Children Prop vs. Name Prop
-Children - any and all component that the tags of given component wrap
+Children: any and all component that the tags of given component wrap
 When a component wraps another component, it receives them in the children prop
 automatically
 
-
+---
 ### Class Based Components (Legacy)
 No longer recommended, they have been replaced by functional components.
 
