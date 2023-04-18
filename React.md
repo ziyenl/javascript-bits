@@ -335,45 +335,46 @@ It has state based variable and is used in lieu. So, no useState, useEffect etc.
 a. Class Constructor. Bind any function that wasn't written using arrow syntax and set intiial values.
   
 
-      export class CounterButtonCBPage extends Component {
-        state = {
-          hideMessage: false,
-          numberOfClicks: 0,
-        }
-      
-        // function needs constructor if don't use arrow
-        // set initial value of variables
-        /**constructor() {
-          super(props)
-          this.increment = this.increment.bind(this);
-        }
-        increment () {
-          this.setState({numberOfClicks: this.state.numberOfClicks + 1});
-        }**/
+     export class CounterButtonCBPage extends Component {
+       state = {
+         hideMessage: false,
+         numberOfClicks: 0,
+       }
+     
+       // function needs constructor if don't use arrow
+       // set initial value of variables
+       //constructor() {
+       //  super(props)
+       //  this.increment = this.increment.bind(this);
+       //}
+       //increment () {
+       //  this.setState({numberOfClicks: this.state.numberOfClicks + 1});
+       //}
 
-      increment = () => {
-        this.setState({numberOfClicks: this.state.numberOfClicks + 1});
-      }
-      render() {
-        return (
-            
-        )
-      }
-    }
+     increment = () => {
+       this.setState({numberOfClicks: this.state.numberOfClicks + 1});
+     }
+     render() {
+       return (
+           
+       )
+     }
+   }
 
 4. Arrow functions tend to replace need of constructor. See below equivalent.
 
      
+
     // function needs constructor if don't use arrow
         // set initial value of variables
-        /**constructor() {
-          super(props)
-          this.increment = this.increment.bind(this);
-          this.state = xxx
-        }
-        increment () {
-          this.setState({numberOfClicks: this.state.numberOfClicks + 1});
-        }**/
+        // constructor() {
+        //  super(props)
+        //  this.increment = this.increment.bind(this);
+        //  this.state = xxx
+        //}
+        //increment () {
+       //   this.setState({numberOfClicks: this.state.numberOfClicks + 1});
+        //}
 
       increment = () => {
         this.setState({numberOfClicks: this.state.numberOfClicks + 1});
