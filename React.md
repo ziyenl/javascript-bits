@@ -332,49 +332,69 @@ No longer recommended, they have been replaced by functional components.
 It has state based variable and is used in lieu. So, no useState, useEffect etc.
 
 3. It has several lifecycle methods for render, prop change. 
-a. Class Constructor. Bind any function that wasn't written using arrow syntax and set intiial values.
-  
 
-     export class CounterButtonCBPage extends Component {
-       state = {
-         hideMessage: false,
-         numberOfClicks: 0,
-       }
-     
-       // function needs constructor if don't use arrow
-       // set initial value of variables
-       //constructor() {
-       //  super(props)
-       //  this.increment = this.increment.bind(this);
-       //}
-       //increment () {
-       //  this.setState({numberOfClicks: this.state.numberOfClicks + 1});
-       //}
+Class Constructor. Bind any function that wasn't written using arrow syntax and set intiial values.
 
-     increment = () => {
-       this.setState({numberOfClicks: this.state.numberOfClicks + 1});
-     }
-     render() {
-       return (
+
+       export class CounterButtonCBPage extends Component {
+          state = {
+            hideMessage: false,
+            numberOfClicks: 0,
+          }
+       
+         // function needs constructor if don't use arrow
+         // set initial value of variables
+         constructor() {
+           super(props)
+           this.increment = this.increment.bind(this);
+         }
+         increment () {
+           this.setState({numberOfClicks: this.state.numberOfClicks + 1});
+         }
+       
+        
+        render() {
+          return (
            
-       )
-     }
-   }
+          )
+        }
+       }
+
+Arrow Function Based
+
+       export class CounterButtonCBPage extends Component {
+         state = {
+           hideMessage: false,
+           numberOfClicks: 0,
+         }
+
+       increment = () => {
+         this.setState({numberOfClicks: this.state.numberOfClicks + 1});
+       }
+       render() {
+         return (
+             
+         )
+       }
+      }
 
 4. Arrow functions tend to replace need of constructor. See below equivalent.
 
+Constructor-based
      
+        // function needs constructor if don't use arrow
+          // set initial value of variables
+          constructor() {
+            super(props)
+            this.increment = this.increment.bind(this);
+            this.state = xxx
+          }
+          increment () {
+            this.setState({numberOfClicks: this.state.numberOfClicks + 1});
+          }
 
-    // function needs constructor if don't use arrow
-        // set initial value of variables
-        // constructor() {
-        //  super(props)
-        //  this.increment = this.increment.bind(this);
-        //  this.state = xxx
-        //}
-        //increment () {
-       //   this.setState({numberOfClicks: this.state.numberOfClicks + 1});
-        //}
+
+Equivalent arrow function
 
       increment = () => {
         this.setState({numberOfClicks: this.state.numberOfClicks + 1});
